@@ -69,12 +69,6 @@ if __name__ == "__main__":
     output_2 = canGetExactChange(target_2, arr_2)
     check(expected_2, output_2)
 
-    target_3 = 38
-    arr_3 = [4, 17, 29]
-    expected_3 = True
-    output_3 = canGetExactChange(target_3, arr_3)
-    check(expected_3, output_3)
-
     target_3 = 67
     arr_3 = [4, 17, 29]
     expected_3 = True
