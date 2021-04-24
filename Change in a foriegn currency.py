@@ -25,8 +25,8 @@ def exactChange(money, denominations):
         if(exactChange(money-denom, denominations)): #Subtract the temporary money value by the current denomination.
             #print(denom) #Uncomment to view the recursive solution.
             return True
-    return False #If we hit this part of the code, no combination of denominations worked. Thus, return False.
-
+    return False #If we hit this part of the code, no combination of denominations worked (in
+                 #the current tree). Thus, return False.
 
 # These are the tests we use to determine if the solution is correct.
 # You can add your own at the bottom, but they are otherwise not editable!
