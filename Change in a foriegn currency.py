@@ -10,12 +10,9 @@ import math
 
 # Add any helper functions you may need here
 
-
 def canGetExactChange(targetMoney, denominations):
 
-
 # Write your code here
-
 
 # These are the tests we use to determine if the solution is correct.
 # You can add your own at the bottom, but they are otherwise not editable!
@@ -58,4 +55,22 @@ if __name__ == "__main__":
     output_2 = canGetExactChange(target_2, arr_2)
     check(expected_2, output_2)
 
+    target_3 = 67
+    arr_3 = [4, 17, 29]
+    expected_3 = True
+    output_3 = canGetExactChange(target_3, arr_3)
+    check(expected_3, output_3)
+
+    target_4 = 130
+    arr_4 = [7, 15, 28, 56, 121]
+    expected_4 = True
+    output_4 = canGetExactChange(target_4, arr_4)
+    check(expected_4, output_4)
+
+    target_5 = 61
+    arr_5 = [7, 17, 29]
+    expected_5 = False
+    output_5 = canGetExactChange(target_5, arr_5)
+    check(expected_5, output_5)
+           
     # Add your own test cases here
