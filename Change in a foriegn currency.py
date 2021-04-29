@@ -10,23 +10,9 @@ import math
 
 # Add any helper functions you may need here
 
-
 def canGetExactChange(targetMoney, denominations):
-    sorted_denominations = sorted(denominations)
-    sorted_denominations.reverse() #Sort array and organize highest denominations first
-    return exactChange(targetMoney, sorted_denominations) #Call recursive function
 
-def exactChange(money, denominations):
-    if money == 0: #If the money was divisible to exactly zero, horray we have a solution.
-        return True #Ripple up 'True' through the recursive functions. See lines 25 & 27.
-    if money < 0:    #If the denomination overshot (e.g. not divisible), terminate the current
-        return False #iteration of the recursive function, move on to the next denomination.
-    for denom in denominations: #For each denomination...
-        if(exactChange(money-denom, denominations)): #Subtract the temporary money value by the current denomination.
-            #print(denom) #Uncomment to view the recursive solution.
-            return True
-    return False #If we hit this part of the code, no combination of denominations worked (in
-                 #the current tree). Thus, return False.
+# Write your code here
 
 # These are the tests we use to determine if the solution is correct.
 # You can add your own at the bottom, but they are otherwise not editable!
@@ -75,9 +61,16 @@ if __name__ == "__main__":
     output_3 = canGetExactChange(target_3, arr_3)
     check(expected_3, output_3)
 
-    target_4 = 1298
-    arr_4 = [8, 14, 29, 45, 56, 121]
+    target_4 = 130
+    arr_4 = [7, 15, 28, 56, 121]
     expected_4 = True
     output_4 = canGetExactChange(target_4, arr_4)
     check(expected_4, output_4)
+
+    target_5 = 61
+    arr_5 = [7, 17, 29]
+    expected_5 = False
+    output_5 = canGetExactChange(target_5, arr_5)
+    check(expected_5, output_5)
+           
     # Add your own test cases here
